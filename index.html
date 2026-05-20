@@ -33,7 +33,7 @@
 <section class="hero is-fullheight paper-hero">
   <div class="hero-overlay"></div>
   <div class="hero-head">
-    <nav class="navbar" role="navigation" aria-label="main navigation">
+    <nav class="navbar paper-navbar" role="navigation" aria-label="main navigation">
       <div class="container is-max-widescreen">
         <div class="navbar-brand">
           <a class="navbar-item brand-text" href="#paper-home">Humanoid Manipulation</a>
@@ -57,12 +57,15 @@
 
   <div class="hero-body">
     <div class="container has-text-centered hero-copy">
-      <h1 class="title publication-title hero-title">Humanoid Whole-Body Manipulation</h1>
-      <p class="subtitle hero-subtitle">via Active Spatial Brain and Generalizable Action Cerebellum</p>
-      <a class="hero-scroll" href="#paper-home" aria-label="Scroll to paper content">
-        <span>Scroll</span>
-        <i class="fas fa-angle-down"></i>
-      </a>
+      <div class="hero-title-panel">
+        <h1 class="title publication-title hero-title">Humanoid Whole-Body Manipulation</h1>
+        <p class="subtitle hero-subtitle">via <span class="hero-rainbow-fill">Active Spatial Brain</span> and<br><span class="hero-rainbow-fill hero-rainbow-fill-alt">Generalizable Action Cerebellum</span></p>
+        <p class="hero-summary">A framework that enables generalizable humanoid whole-body dexterous manipulation<br>without relying on any robot-specific data.</p>
+        <a class="hero-scroll" href="#paper-home" aria-label="Scroll to paper content">
+          <span>Scroll</span>
+          <i class="fas fa-angle-down"></i>
+        </a>
+      </div>
     </div>
   </div>
 </section>
@@ -72,22 +75,22 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Humanoid Whole-Body Manipulation via Active Spatial Brain and Generalizable Action Cerebellum</h1>
+          <h1 class="title is-1 publication-title">Humanoid Whole-Body Manipulation via Active Spatial Brain and<br>Generalizable Action Cerebellum</h1>
 
           <div class="is-size-5 publication-authors paper-author-list">
-            <span class="author-block">Zhizhao Liang<sup>1,*</sup>,</span>
-            <span class="author-block">Yi-Lin Wei<sup>1,*</sup>,</span>
-            <span class="author-block">Xuhang Chen<sup>1,*</sup>,</span>
-            <span class="author-block">Mu Lin<sup>1</sup>,</span>
-            <span class="author-block">Yi-Xiang He<sup>1</sup>,</span>
-            <span class="author-block">Zhexi Luo<sup>1</sup>,</span>
-            <span class="author-block">Jun-Hui Liu<sup>1</sup>,</span>
-            <span class="author-block">Kun-Yu Lin<sup>1</sup>,</span>
-            <span class="author-block">Wei-Shi Zheng<sup>1,†</sup></span>
+            <span class="author-block">Zhizhao Liang<sup>*</sup>,</span>
+            <span class="author-block">Yi-Lin Wei<sup>*</sup>,</span>
+            <span class="author-block">Xuhang Chen<sup>*</sup>,</span>
+            <span class="author-block">Mu Lin,</span>
+            <span class="author-block">Yi-Xiang He,</span>
+            <span class="author-block">Zhexi Luo,</span>
+            <span class="author-block">Jun-Hui Liu,</span>
+            <span class="author-block">Kun-Yu Lin,</span>
+            <span class="author-block">Wei-Shi Zheng<sup>†</sup></span>
           </div>
 
           <div class="is-size-5 publication-authors publication-affiliations">
-            <span class="author-block"><sup>1</sup>School of Computer Science and Engineering, Sun Yat-sen University</span>
+            <span class="author-block">School of Computer Science and Engineering, Sun Yat-sen University</span>
           </div>
 
           <div class="is-size-6 publication-authors contribution-note">* Equal contribution. † Corresponding author.</div>
@@ -95,15 +98,21 @@
           <div class="column has-text-centered paper-links">
             <div class="publication-links">
               <span class="link-block">
-                <a href="#" class="external-link button is-normal is-rounded is-dark" aria-disabled="true" onclick="return false;">
-                  <span class="icon"><i class="ai ai-arxiv"></i></span>
-                  <span>Paper Coming Soon</span>
+                <a href="#paper-video" class="external-link button is-normal is-rounded paper-link-primary">
+                  <span class="icon"><i class="fas fa-play"></i></span>
+                  <span>Watch Highlights</span>
                 </a>
               </span>
               <span class="link-block">
-                <a href="#" class="external-link button is-normal is-rounded is-dark" aria-disabled="true" onclick="return false;">
+                <a href="#" class="external-link button is-normal is-rounded paper-link-muted" aria-disabled="true" onclick="return false;">
+                  <span class="icon"><i class="ai ai-arxiv"></i></span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="#" class="external-link button is-normal is-rounded paper-link-muted" aria-disabled="true" onclick="return false;">
                   <span class="icon"><i class="fab fa-github"></i></span>
-                  <span>Code Coming Soon</span>
+                  <span>Code</span>
                 </a>
               </span>
             </div>
@@ -124,29 +133,157 @@
             <source src="./media/overview/video.mp4" type="video/mp4">
           </video>
         </div>
-        <p class="video-section-note">More experiment videos are being organized and will be uploaded soon.</p>
-        <div class="columns is-multiline media-grid pending-video-grid">
-          <div class="column is-one-third-desktop is-half-tablet">
-            <div class="video-card pending-video-card">
-              <div class="placeholder-panel video-placeholder-panel">
-                <p class="placeholder-title">Upcoming Video 1</p>
-                <p class="placeholder-note">Additional demonstration video is pending upload.</p>
+
+        <div class="media-group-block media-group-block-featured">
+          <div class="media-group-head">
+            <span class="media-group-step">01</span>
+            <p class="media-group-kicker">Reachability Analysis</p>
+            <h3 class="title is-4 media-group-title">Different Positions and Heights</h3>
+            <p class="media-group-copy">The four videos below demonstrate operations under different object positions and heights. The heatmap underneath compares reachability across different methods.</p>
+          </div>
+          <div class="columns is-mobile is-variable is-2 media-grid visual-media-grid visual-media-grid-four-compact">
+            <div class="column media-four-column">
+              <div class="video-card media-slot-card media-slot-card-compact">
+                <video controls playsinline preload="metadata" class="paper-video-element">
+                  <source src="./media/real/pos1-web.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+            <div class="column media-four-column">
+              <div class="video-card media-slot-card media-slot-card-compact">
+                <video controls playsinline preload="metadata" class="paper-video-element">
+                  <source src="./media/real/pos2-web.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+            <div class="column media-four-column">
+              <div class="video-card media-slot-card media-slot-card-compact">
+                <video controls playsinline preload="metadata" class="paper-video-element">
+                  <source src="./media/real/pos3-web.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+            <div class="column media-four-column">
+              <div class="video-card media-slot-card media-slot-card-compact">
+                <video controls playsinline preload="metadata" class="paper-video-element">
+                  <source src="./media/real/pos4-web.mp4" type="video/mp4">
+                </video>
               </div>
             </div>
           </div>
-          <div class="column is-one-third-desktop is-half-tablet">
-            <div class="video-card pending-video-card">
-              <div class="placeholder-panel video-placeholder-panel">
-                <p class="placeholder-title">Upcoming Video 2</p>
-                <p class="placeholder-note">More robot results will be added as the page is finalized.</p>
+          <div class="columns media-grid visual-media-grid heatmap-row">
+            <div class="column is-full">
+              <div class="video-card media-slot-card media-slot-card-wide heatmap-slot-card">
+                <img class="paper-figure media-heatmap-image" src="./media/figures/heatmap/heatmap1.pdf.png" alt="Reachability heatmap across different positions and heights">
               </div>
             </div>
           </div>
-          <div class="column is-one-third-desktop is-half-tablet">
-            <div class="video-card pending-video-card">
-              <div class="placeholder-panel video-placeholder-panel">
-                <p class="placeholder-title">Upcoming Video 3</p>
-                <p class="placeholder-note">This project page is still under construction.</p>
+        </div>
+
+        <div class="media-group-block">
+          <div class="media-group-head">
+            <span class="media-group-step">02</span>
+            <p class="media-group-kicker">Long-Horizon Task</p>
+            <h3 class="title is-4 media-group-title">Long-Horizon</h3>
+            <p class="media-group-copy">This long-horizon task demonstrates how the system can autonomously plan, invoke active visual perception, and execute manipulation actions to complete user-provided instructions that contain multiple subtasks.</p>
+          </div>
+          <div class="media-grid visual-media-grid">
+            <div class="video-card media-slot-card media-slot-card-wide long-horizon-card">
+              <video controls playsinline preload="metadata" class="paper-video-element mixed-media-video-horizontal">
+                <source src="./media/real/longhorizon-1-web.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+
+        <div class="media-group-block">
+          <div class="media-grid visual-media-grid critic-primitives-row">
+            <div class="critic-column">
+              <div class="mixed-media-column">
+                <div class="media-group-head media-group-head-split">
+                  <span class="media-group-step">03</span>
+                  <p class="media-group-kicker">Planning</p>
+                  <h3 class="title is-4 media-group-title">Adaptive Planning</h3>
+                  <p class="media-group-copy">The planner leverages execution feedback to enable closed-loop control.</p>
+                </div>
+                <h4 class="mixed-media-title">Adaptive Planning</h4>
+                <div class="video-card media-slot-card media-slot-card-wide media-slot-card-portrait mixed-media-card mixed-media-card-portrait">
+                  <video controls playsinline preload="metadata" class="paper-video-element paper-video-element-portrait">
+                    <source src="./media/real/critic-web.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+            </div>
+            <div class="primitives-column">
+              <div class="mixed-media-column">
+                <div class="media-group-head media-group-head-split">
+                  <span class="media-group-step">04</span>
+                  <p class="media-group-kicker">Trajectory Generation</p>
+                  <h3 class="title is-4 media-group-title">Action Primitives</h3>
+                  <p class="media-group-copy">Action primitives are incorporated to generate executable manipulation trajectories.</p>
+                </div>
+                <h4 class="mixed-media-title">Action Primitives</h4>
+                <div class="primitive-grid-inline">
+                  <div class="primitive-grid-cell">
+                    <div class="primitive-item">
+                      <div class="video-card media-slot-card media-slot-card-compact primitive-card">
+                        <img class="paper-figure primitive-figure" src="./media/figures/primitives/push1.pdf.png" alt="Push primitive illustration from the paper">
+                      </div>
+                      <p class="primitive-label">Push</p>
+                    </div>
+                  </div>
+                  <div class="primitive-grid-cell">
+                    <div class="primitive-item">
+                      <div class="video-card media-slot-card media-slot-card-compact primitive-card">
+                        <img class="paper-figure primitive-figure" src="./media/figures/primitives/pull1.pdf.png" alt="Pull primitive illustration from the paper">
+                      </div>
+                      <p class="primitive-label">Pull</p>
+                    </div>
+                  </div>
+                  <div class="primitive-grid-cell">
+                    <div class="primitive-item">
+                      <div class="video-card media-slot-card media-slot-card-compact primitive-card">
+                        <img class="paper-figure primitive-figure" src="./media/figures/primitives/place1.pdf.png" alt="Place primitive illustration from the paper">
+                      </div>
+                      <p class="primitive-label">Place</p>
+                    </div>
+                  </div>
+                  <div class="primitive-grid-cell">
+                    <div class="primitive-item">
+                      <div class="video-card media-slot-card media-slot-card-compact primitive-card">
+                        <img class="paper-figure primitive-figure" src="./media/figures/primitives/rotate1.pdf.png" alt="Rotate primitive illustration from the paper">
+                      </div>
+                      <p class="primitive-label">Rotate</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="media-group-block">
+          <div class="media-group-head">
+            <span class="media-group-step">05</span>
+            <p class="media-group-kicker">Spatial Understanding</p>
+            <h3 class="title is-4 media-group-title">Two Spatial Understanding Tasks</h3>
+            <p class="media-group-copy">The two tasks below demonstrate obstacle avoidance and active exploration for spatial understanding.</p>
+          </div>
+          <div class="columns is-variable is-4 media-grid visual-media-grid visual-media-grid-halves">
+            <div class="column is-half-desktop is-half-tablet">
+              <h4 class="mixed-media-title">Obstacle Avoidance</h4>
+              <div class="video-card media-slot-card media-slot-card-wide spatial-task-card">
+                <video controls playsinline preload="metadata" class="paper-video-element">
+                  <source src="./media/real/nav-web.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+            <div class="column is-half-desktop is-half-tablet">
+              <h4 class="mixed-media-title">Active Exploration</h4>
+              <div class="video-card media-slot-card media-slot-card-wide spatial-task-card">
+                <video controls playsinline preload="metadata" class="paper-video-element">
+                  <source src="./media/real/swipe-web.mp4" type="video/mp4">
+                </video>
               </div>
             </div>
           </div>
@@ -189,11 +326,16 @@
     <div class="columns is-centered has-text-centered">
       <div class="column is-full">
         <h2 class="title is-3">BibTeX</h2>
-        <div class="pdf-card">
-          <div class="placeholder-panel">
-            <p class="placeholder-title">BibTeX Placeholder</p>
-            <p class="placeholder-note">This area is reserved for the final citation entry.</p>
-          </div>
+        <div class="pdf-card bibtex-card">
+          <pre class="bibtex-block">@misc{liang2026humanoid,
+  title={Humanoid Whole-Body Manipulation via Active Spatial Brain and Generalizable Action Cerebellum},
+  author={Zhizhao Liang and Yi-Lin Wei and Xuhang Chen and Mu Lin and Yi-Xiang He and Zhexi Luo and Jun-Hui Liu and Kun-Yu Lin and Wei-Shi Zheng},
+  year={2026},
+  archivePrefix={arXiv},
+  primaryClass={cs.RO},
+  eprint={TODO},
+  url={https://arxiv.org/abs/TODO}
+}</pre>
         </div>
       </div>
     </div>
