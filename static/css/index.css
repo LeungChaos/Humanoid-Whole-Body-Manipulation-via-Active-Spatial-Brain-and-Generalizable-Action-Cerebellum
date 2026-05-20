@@ -1,7 +1,7 @@
 body {
   font-family: 'Noto Sans', sans-serif;
-  background: #ffffff;
-  color: #1f2937;
+  background: #f4f1ea;
+  color: #1d2430;
 }
 
 html {
@@ -10,17 +10,17 @@ html {
 
 .paper-hero {
   position: relative;
-  background-image: url('../../media/hero/toppage.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background:
+    radial-gradient(circle at top left, rgba(230, 154, 96, 0.22), transparent 32%),
+    radial-gradient(circle at top right, rgba(63, 98, 156, 0.18), transparent 34%),
+    linear-gradient(135deg, #172033 0%, #24324c 48%, #314767 100%);
   color: #fff;
 }
 
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(7, 13, 24, 0.48) 0%, rgba(7, 13, 24, 0.7) 100%);
+  background: linear-gradient(180deg, rgba(9, 14, 27, 0.2) 0%, rgba(9, 14, 27, 0.56) 100%);
 }
 
 .paper-hero .hero-head,
@@ -80,7 +80,7 @@ html {
 }
 
 .section-alt {
-  background: #f7f9fc;
+  background: #fbf8f2;
 }
 
 .footer .icon-link {
@@ -156,11 +156,11 @@ html {
 .video-card,
 .figure-card,
 .pdf-card {
-  background: #fff;
-  border: 1px solid #dbe3ef;
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid #dfd7ca;
   border-radius: 18px;
   padding: 1rem;
-  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+  box-shadow: 0 14px 36px rgba(29, 36, 48, 0.08);
 }
 
 .large-video-card {
@@ -194,6 +194,26 @@ html {
 .abstract-copy p {
   font-size: 1.05rem;
   line-height: 1.9;
+}
+
+.placeholder-panel {
+  display: flex;
+  min-height: 240px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2.5rem 1.5rem;
+  border: 1px dashed #c9bea9;
+  border-radius: 14px;
+  background: linear-gradient(180deg, rgba(255, 252, 245, 0.98) 0%, rgba(248, 244, 235, 0.98) 100%);
+}
+
+.placeholder-title {
+  margin-bottom: 0.65rem;
+  font-family: 'Google Sans', sans-serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #24324c;
 }
 
 .pdf-frame {
