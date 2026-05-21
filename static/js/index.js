@@ -83,53 +83,11 @@ $(document).ready(function() {
   }
 
   var managedVideos = Array.prototype.slice.call(document.querySelectorAll('#paper-video video'));
-  var lazyVideos = managedVideos.filter(function(video) {
-    return video.hasAttribute('data-lazy-video');
-  });
-
-  function hydrateVideo(video) {
-    if (video.dataset.videoHydrated === 'true') {
-      return;
-    }
-
-    var sources = Array.prototype.slice.call(video.querySelectorAll('source[data-src]'));
-
-    if (!sources.length) {
-      video.dataset.videoHydrated = 'true';
-      return;
-    }
-
-    sources.forEach(function(source) {
-      source.src = source.dataset.src;
-      source.removeAttribute('data-src');
-    });
-
-    video.load();
-    video.dataset.videoHydrated = 'true';
-  }
 
   if ('IntersectionObserver' in window && managedVideos.length > 0) {
-    var videoLoadObserver = new IntersectionObserver(function(entries) {
-      entries.forEach(function(entry) {
-        if (!entry.isIntersecting) {
-          return;
-        }
-
-        hydrateVideo(entry.target);
-        videoLoadObserver.unobserve(entry.target);
-      });
-    }, {
-      rootMargin: '280px 0px',
-      threshold: [0.01]
-    });
-
     var videoObserver = new IntersectionObserver(function(entries) {
       entries.forEach(function(entry) {
         var video = entry.target;
-
-        if (entry.isIntersecting) {
-          hydrateVideo(video);
-        }
 
         if (entry.isIntersecting && entry.intersectionRatio >= 0.6) {
           var playPromise = video.play();
@@ -150,19 +108,7 @@ $(document).ready(function() {
 
     managedVideos.forEach(function(video) {
       video.setAttribute('playsinline', '');
-
-      if (video.hasAttribute('data-lazy-video')) {
-        video.addEventListener('play', function() {
-          hydrateVideo(video);
-        }, { once: true });
-        videoLoadObserver.observe(video);
-      }
-
       videoObserver.observe(video);
-    });
-  } else {
-    lazyVideos.forEach(function(video) {
-      hydrateVideo(video);
     });
   }
 });
