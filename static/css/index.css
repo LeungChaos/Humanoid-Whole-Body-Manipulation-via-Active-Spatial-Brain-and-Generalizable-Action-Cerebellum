@@ -112,19 +112,33 @@ html {
 }
 
 .brand-text {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
   font-family: 'Google Sans', sans-serif;
   font-weight: 700;
   letter-spacing: 0.01em;
   margin-left: 0.2rem;
-  border-radius: 999px;
+  padding-right: 1.35rem;
+  border-radius: 0;
   background: rgba(20, 33, 61, 0.62);
   border: 1px solid rgba(255, 255, 255, 0.12);
   box-shadow: 0 10px 24px rgba(8, 14, 28, 0.18);
 }
 
+.brand-text::after {
+  content: "";
+  position: absolute;
+  top: 0.6rem;
+  right: 0.72rem;
+  width: 1px;
+  height: calc(100% - 1.2rem);
+  background: rgba(255, 255, 255, 0.2);
+}
+
 .paper-hero a.brand-text:hover,
 .paper-hero a.brand-text:focus {
-  background: rgba(20, 33, 61, 0.82);
+  background: rgba(12, 24, 48, 0.9);
   color: #fff;
 }
 
